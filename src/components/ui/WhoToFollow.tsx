@@ -8,9 +8,7 @@ import FollowButton from './FollowButton';
 async function WhoToFollow() {
     const users = await getRandomUsers();
 
-    // if(users?.length === 0) return null;
-
-    console.log("random users ", users);
+    if(users?.length === 0) return null;
 
     return (
       <div>
