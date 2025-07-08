@@ -17,7 +17,7 @@ async function Sidebar() {
   const user = await getUserByClerkId(authUser.id);
   if(!user) return null;
 
-  console.log("user", {user});
+  // console.log("user", {user});
 
   return <div className="sticky top-20">
     <Card className="border p-6 rounded-lg">
