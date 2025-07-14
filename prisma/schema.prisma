@@ -103,7 +103,7 @@ model Notification {
   type      NotificationType
   read      Boolean          @default(false)
   postId    String?
-  commenId  String?
+  commentId String?
   createdAt DateTime         @default(now())
 
   // Relations
@@ -111,7 +111,7 @@ model Notification {
   creator User @relation("notificationCreator", fields: [creatorId], references: [id], onDelete: Cascade)
 
   post    Post?    @relation(fields: [postId], references: [id], onDelete: Cascade)
-  comment Comment? @relation(fields: [commenId], references: [id], onDelete: Cascade)
+  comment Comment? @relation(fields: [commentId], references: [id], onDelete: Cascade)
 
   @@index([userId, createdAt])
 }
